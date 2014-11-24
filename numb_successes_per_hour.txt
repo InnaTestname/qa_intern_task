@@ -1,0 +1,7 @@
+For the 12 hour there are 2 successful requests
+For the 13 hour there are 82 successful requests
+For the 14 hour there are 56 successful requests
+For the 15 hour there are 245 successful requests
+For the 16 hour there are 372 successful requests
+For the 17 hour there are 78 successful requests
+For the $i hour there are 0 successful requests

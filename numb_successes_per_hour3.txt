@@ -1,0 +1,1 @@
+For the $i hour there are 0 successful requests
