@@ -1,11 +1,7 @@
 LC_ALL=C fgrep "GET /adserver/track" localhost_access_log.2014-10-21.log | awk '{print $13}'| sort -n | awk 'BEGIN{i=0} {s[i]=$1; i++;} END{print s[int(NR*0.99)]}'
 
 #Count # of success per hour
-  for i in `cat datamining.log | awk '{print $4}'| awk 'BEGIN { FS=":" } {a[$2]++} END {for (b in a) {print b}}'`; do fgrep 15/Oct/2014:$i datamining.log | awk '$9==200' | awk 'END{ print"For the " $4 " hour there are " NR " successfull requests"}'; done
-
-
-
-
+LC_ALL=C fgrep 15/Oct/2014:14 /home/inna/Downloads/datamining.log | grep 200 |awk 'END{print "For the 14 hour there are " NR " successful requests"}' >> numb_successes_per_hour.txt
 
 #Count % of successful requests per hour
 LC_ALL=C fgrep [15/Oct/2014:13 /home/inna/Downloads/datamining.log | awk '$9 ~ 200{++c} $9 !~ 200{++n} END{print "In hour 13 percentage of successful requests is " 100*c/(c+n),"%"}' >> perc_successes_per_hour.txt
